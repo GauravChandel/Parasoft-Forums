@@ -1,36 +1,17 @@
 name: parasoft-forums
 
-on:
-  push:
-    branches:
-      - main
+on: push
 
 jobs:
   cypress-run:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16
-
-      - name: Cache Cypress Binary
-        uses: actions/cache@v3
-        with:
-          path: ~/.cache/Cypress
-          key: cypress-${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            cypress-${{ runner.os }}-
-
-      - name: Install Dependencies
-        run: npm install
-
-      - name: Install Cypress Binary (if missing)
-        run: npx cypress install
-
-      - name: Run Cypress Tests
-        run: npx cypress run
+      # Install npm dependencies, cache them correctly
+      # and run all Cypress tests
+      - name: Cypress run
+        uses: cypress-io/github-action@v6
 
