@@ -1,0 +1,100 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-03-01T07:56:01.110Z",
+    "end": "2025-03-01T07:56:07.851Z",
+    "duration": 6741,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c97efdd7-14bf-40b7-961c-18e2b783e871",
+      "title": "",
+      "fullFile": "cypress/e2e/signin.cy.js",
+      "file": "cypress/e2e/signin.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b32136d6-5f9f-4f74-96cf-49b54c9c8aac",
+          "title": "Parasoft-Forums",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Parasoft-Forums",
+              "fullTitle": "Parasoft-Forums Parasoft-Forums",
+              "timedOut": null,
+              "duration": 6718,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// cy.contains('Parasoft Forums')",
+              "err": {},
+              "uuid": "58c2b033-7267-4897-9d6f-a32ac93f7742",
+              "parentUUID": "b32136d6-5f9f-4f74-96cf-49b54c9c8aac",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "58c2b033-7267-4897-9d6f-a32ac93f7742"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6718,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
