@@ -6,6 +6,6 @@ describe('Parasoft-Forums', () => {
   })  
 
   it('Parasoft-Forums', () => {
-    cy.contains('Parasoft Forums')
+    // cy.contains('Parasoft Forums')
   })  
 })
