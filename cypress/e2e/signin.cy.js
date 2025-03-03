@@ -6,18 +6,25 @@ const signinPage = new signin()
 import user from '../fixtures/signin.json'
 
 describe('Parasoft-Forums', () => {
-  it('Logs in successfully', () => {
+
+  beforeEach(() => {
     signinPage.geturl()
+  })
+
+  it('Logs in successfully', () => {
     signinPage.login(user.username, user.password)
     cy.wait(2000)
     cy.contains('Parasoft Forums').should('be.visible')
   })
+
+  it('Login / Logs out successfully', () => {
+    signinPage.geturl()
+    signinPage.login(user.username, user.password)
+    cy.wait(2000)
+    cy.contains('Parasoft Forums').should('be.visible')
+    signinPage.logout()
+    cy.wait(2000)
+    cy.url().should('eq', 'https://forums.parasoft.com/')
+  })
+
 })
-
-Cypress.on('uncaught:exception', (err, runnable) => {
-  // returning false here prevents Cypress from failing the test
-  if (err.message.includes("Cannot set properties of null")) {
-    return false;
-  }
-});
-
