@@ -11,12 +11,6 @@ describe('Parasoft-Forums', () => {
     signinPage.geturl()
   })
 
-  it('Logs in successfully', () => {
-    signinPage.login(user.username, user.password)
-    cy.wait(2000)
-    cy.contains('Parasoft Forums').should('be.visible')
-  })
-
   it('Login / Logs out successfully', () => {
     signinPage.geturl()
     signinPage.login(user.username, user.password)
